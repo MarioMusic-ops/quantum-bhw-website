@@ -7677,3 +7677,19 @@ border-radius: 28px;
 }
 }
 
+/* =========================================================
+Mobile Hero Image Focal Point Fix
+========================================================= */
+
+@media (max-width: 760px) {
+.hero-image {
+background-position: 68% center;
+}
+}
+
+@media (max-width: 420px) {
+.hero-image {
+background-position: 72% center;
+}
+}
+
