@@ -7711,3 +7711,72 @@ object-position: 72% center;
 }
 }
 
+/* =========================================================
+Mobile Horizontal Overflow Fix
+========================================================= */
+
+html,
+body {
+width: 100%;
+max-width: 100%;
+overflow-x: hidden;
+}
+
+body {
+position: relative;
+}
+
+@media (max-width: 760px) {
+.navbar,
+.nav-inner,
+main,
+section,
+.hero,
+.hero-media,
+.hero-image,
+.organic-shape,
+.testimonials-inner,
+.services-inner,
+.contact-inner,
+.footer-inner {
+max-width: 100%;
+}
+
+.hero {
+width: 100%;
+box-sizing: border-box;
+}
+
+.hero-media {
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
+}
+
+.hero-image {
+width: 100%;
+max-width: 100%;
+}
+
+.organic-shape {
+max-width: 100%;
+box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+max-width: 100%;
+}
+}
+
+/* Remove mobile 100vw overflow issues */
+@media (max-width: 760px) {
+[class*="section"],
+[class*="inner"],
+[class*="container"] {
+box-sizing: border-box;
+}
+}
+
+
