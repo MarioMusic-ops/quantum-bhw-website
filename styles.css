@@ -2530,7 +2530,6 @@ a.ci-value:hover {
 
   .hero-media {
     position: relative;
-    margin: 0 12px;
     height: 410px;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -5432,7 +5431,6 @@ a.ci-value:hover {
 
   .hero-media {
     position: relative;
-    margin: 0 12px;
     height: 410px;
     border-radius: var(--radius-lg);
     overflow: hidden;
