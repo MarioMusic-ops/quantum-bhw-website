@@ -1043,36 +1043,146 @@
   </a>
 </div>
 
-<div class="resources-join-card reveal-fade-up">
-  <div class="resources-join-copy">
-    <span class="eyebrow">Join Our Team</span>
+<div class="resources-join-card reveal-fade-up"> <div class="resources-join-copy"> <span class="eyebrow">Join Our Team</span>
 
-    <h2>Grow with Quantum</h2>
+<h2>Grow with Quantum</h2>
 
-    <p>
-      Interested in employment, clinical, coaching, administrative, internship,
-      or volunteer opportunities with Quantum? We welcome mission-aligned
-      individuals who value culturally affirming, trauma-informed, and
-      community-centered care.
-    </p>
+<p>
+  Interested in employment, clinical, coaching, administrative, internship,
+  or volunteer opportunities with Quantum? We welcome mission-aligned
+  individuals who value culturally affirming, trauma-informed, and
+  community-centered care.
+</p>
 
-    <p class="resources-join-note">
-      For opportunities or volunteer inquiries, please contact our team and include
-      your name, area of interest, credentials or experience, and the best way to
-      reach you.
-    </p>
-  </div>
+<p class="resources-join-note">
+  Complete a brief opportunities inquiry and our team will review your information.
+</p>
 
-  <a
-    href="mailto:plewis@Youbelonghere.live?subject=Opportunities%20Inquiry%20-%20Employment%20or%20Volunteer"
-    class="btn resources-join-btn"
-  >
-    Opportunities
-  </a>
 </div>
 
-</div> </section>
+<button
+type="button"
+class="btn resources-join-btn"
+id="open-opportunities-form"
 
+
+
+
+Opportunities
+
+</button> </div>
+
+<!-- Opportunities Popup Form -->
+
+<div class="opportunity-modal" id="opportunity-modal" aria-hidden="true"> <div class="opportunity-modal-backdrop" data-close-opportunity-modal></div>
+
+<div class="opportunity-modal-card" role="dialog" aria-modal="true" aria-labelledby="opportunity-modal-title" > <button type="button" class="opportunity-modal-close" aria-label="Close opportunities form" data-close-opportunity-modal > × </button>
+
+<span class="eyebrow">Opportunities Inquiry</span>
+
+<h2 id="opportunity-modal-title">Connect with Quantum</h2>
+
+<p class="opportunity-modal-lead">
+  Please share your contact information and the type of opportunity you are
+  interested in. This form is for employment, internship, volunteer, coaching,
+  administrative, and clinical inquiries.
+</p>
+
+<form
+  class="opportunity-form"
+  action="https://formsubmit.co/info@youbelonghere.live"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="New Opportunities Inquiry from Quantum Website" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_captcha" value="false" />
+
+  <label class="field">
+    <span>Full name</span>
+    <input
+      type="text"
+      name="Full Name"
+      placeholder="Your full name"
+      autocomplete="name"
+      required
+    />
+  </label>
+
+  <div class="field-row">
+    <label class="field">
+      <span>Email</span>
+      <input
+        type="email"
+        name="Email"
+        placeholder="you@example.com"
+        autocomplete="email"
+        required
+      />
+    </label>
+
+    <label class="field">
+      <span>Phone number</span>
+      <input
+        type="tel"
+        name="Phone"
+        placeholder="(555) 123-4567"
+        autocomplete="tel"
+      />
+    </label>
+  </div>
+
+  <label class="field">
+    <span>Opportunity type</span>
+    <select name="Opportunity Type" required>
+      <option value="">Select one</option>
+      <option value="Employment">Employment</option>
+      <option value="Clinical Position">Clinical Position</option>
+      <option value="Coaching Position">Coaching Position</option>
+      <option value="Administrative Position">Administrative Position</option>
+      <option value="Internship">Internship</option>
+      <option value="Volunteer Opportunity">Volunteer Opportunity</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+
+  <label class="field">
+    <span>Credentials, experience, or background</span>
+    <input
+      type="text"
+      name="Credentials or Experience"
+      placeholder="Example: LPC, PLPC, Life Coach, Admin experience, student intern, volunteer"
+    />
+  </label>
+
+  <label class="field">
+    <span>Brief summary</span>
+    <textarea
+      name="Brief Summary"
+      rows="5"
+      placeholder="Tell us what you are interested in and why you would like to connect with Quantum..."
+      required
+    ></textarea>
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" name="Contact Consent" value="Yes" required />
+    <span>
+      I agree to be contacted by Quantum Behavioral Health & Wellness regarding
+      my opportunities inquiry.
+    </span>
+  </label>
+
+  <button type="submit" class="btn btn-primary opportunity-submit">
+    Submit Inquiry
+    <span class="btn-arrow" aria-hidden="true">→</span>
+  </button>
+
+  <p class="opportunity-form-note">
+    Please do not submit Protected Health Information through this form.
+  </p>
+</form>
+
+</div> </div>
     <!-- CRISIS HELP -->
 <section class="consult crisis-section" id="crisis">
   <div class="crisis-panel">
