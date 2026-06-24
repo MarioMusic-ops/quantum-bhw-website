@@ -38,17 +38,7 @@
         </a>
       </div>
 
-      <form
-        class="opportunities-form"
-        id="opportunities-form"
-        aria-label="Opportunities inquiry form"
-        action="https://formsubmit.co/ajax/codedbymario@gmail.com"
-        method="POST"
-      >
-        <input type="hidden" name="_subject" value="New Opportunities Inquiry from Quantum Website" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
+      <form class="opportunities-form" id="opportunities-form" aria-label="Opportunities inquiry form" action="https://formsubmit.co/ajax/codedbymario@gmail.com" method="POST" > <input type="hidden" name="_subject" value="New Opportunities Inquiry from Quantum Website" /> <input type="hidden" name="_template" value="table" /> <input type="hidden" name="_captcha" value="false" /> <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
 
         <div class="field-row">
           <label class="field">
@@ -196,6 +186,6 @@
 
 </main>
 
-<script> document.addEventListener("DOMContentLoaded", function () { const opportunitiesForm = document.getElementById("opportunities-form"); if (!opportunitiesForm) return; opportunitiesForm.addEventListener("submit", function (event) { event.preventDefault(); const submitButton = opportunitiesForm.querySelector("button[type='submit']"); const originalButtonText = submitButton ? submitButton.innerHTML : ""; if (submitButton) { submitButton.disabled = true; submitButton.innerHTML = "Sending..."; } const formData = new FormData(opportunitiesForm); let hasRedirected = false; function goToThankYouPage() { if (hasRedirected) return; hasRedirected = true; window.location.href = "../thank-you/thank-you.html"; } fetch(opportunitiesForm.action, { method: "POST", body: formData, headers: { Accept: "application/json" } }) .then(function () { goToThankYouPage(); }) .catch(function (error) { console.warn("Opportunities form submitted, redirect fallback used:", error); goToThankYouPage(); }); setTimeout(function () { goToThankYouPage(); }, 3500); }); }); </script>
+<script> document.addEventListener("DOMContentLoaded", function () { const opportunitiesForm = document.getElementById("opportunities-form"); if (!opportunitiesForm) return; opportunitiesForm.addEventListener("submit", function (event) { event.preventDefault(); const submitButton = opportunitiesForm.querySelector("button[type='submit']"); const originalButtonText = submitButton ? submitButton.innerHTML : ""; if (submitButton) { submitButton.disabled = true; submitButton.innerHTML = "Sending..."; } const formData = new FormData(opportunitiesForm); fetch(opportunitiesForm.action, { method: "POST", body: formData, headers: { Accept: "application/json" } }) .then(function (response) { if (!response.ok) { throw new Error("FormSubmit did not accept the submission."); } return response.json(); }) .then(function () { window.location.href = "../thank-you/thank-you.html"; }) .catch(function (error) { console.error("Opportunities form error:", error); alert( "Something went wrong and the inquiry may not have been sent. Please try again or call 888-441-3959." ); if (submitButton) { submitButton.disabled = false; submitButton.innerHTML = originalButtonText; } }); }); }); </script>
 
 </body> </html>
