@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Opportunities | Quantum Behavioral Health & Wellness</title>
+
+<meta name="description" content="Submit an opportunities inquiry for employment, volunteer, internship, coaching, administrative, or clinical roles with Quantum Behavioral Health & Wellness." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="./opportunities.css" /> </head>
+
+<body> <main class="opportunities-page"> <section class="opportunities-hero" aria-labelledby="opportunities-title"> <div class="opportunities-card"> <a href="../index.html#home" class="opportunities-logo-link" aria-label="Return to Quantum Behavioral Health & Wellness home" > <img src="../assets/quantum-logo.png" alt="Quantum Behavioral Health & Wellness logo" class="opportunities-logo" /> </a>
+
+    <div class="opportunities-layout">
+      <div class="opportunities-copy">
+        <p class="eyebrow">Opportunities</p>
+
+        <h1 id="opportunities-title">
+          Grow with Quantum.
+        </h1>
+
+        <p class="opportunities-lead">
+          Thank you for your interest in connecting with Quantum Behavioral
+          Health & Wellness. Please complete this brief inquiry form for
+          employment, volunteer, internship, coaching, administrative, or
+          clinical opportunities.
+        </p>
+
+        <div class="opportunities-note" role="note">
+          <strong>Please note:</strong>
+          This form is for opportunities inquiries only. Please do not submit
+          Protected Health Information or emergency requests through this form.
+        </div>
+
+        <a href="../index.html#home" class="back-home-link">
+          ← Go back home
+        </a>
+      </div>
+
+      <form
+        class="opportunities-form"
+        id="opportunities-form"
+        aria-label="Opportunities inquiry form"
+        action="https://formsubmit.co/ajax/info@youbelonghere.live"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New Opportunities Inquiry from Quantum Website" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
+
+        <div class="field-row">
+          <label class="field">
+            <span>Full name</span>
+            <input
+              type="text"
+              name="Full Name"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label class="field">
+            <span>Phone number</span>
+            <input
+              type="tel"
+              name="Phone"
+              placeholder="(555) 123-4567"
+              autocomplete="tel"
+            />
+          </label>
+
+          <label class="field">
+            <span>Preferred contact method</span>
+            <select name="Preferred Contact Method">
+              <option value="">Select one</option>
+              <option value="Email">Email</option>
+              <option value="Phone">Phone</option>
+              <option value="Either email or phone">Either email or phone</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label class="field">
+            <span>Opportunity type</span>
+            <select name="Opportunity Type" required>
+              <option value="">Select one</option>
+              <option value="Employment">Employment</option>
+              <option value="Clinical Position">Clinical Position</option>
+              <option value="Coaching Position">Coaching Position</option>
+              <option value="Administrative Position">Administrative Position</option>
+              <option value="Internship">Internship</option>
+              <option value="Volunteer Opportunity">Volunteer Opportunity</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Area of interest</span>
+            <input
+              type="text"
+              name="Area of Interest"
+              placeholder="Example: therapy, coaching, intake, admin, outreach"
+              required
+            />
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Credentials, license, or experience</span>
+          <input
+            type="text"
+            name="Credentials or Experience"
+            placeholder="Example: LPC, PLPC, Life Coach, student intern, admin experience"
+          />
+        </label>
+
+        <div class="field-row">
+          <label class="field">
+            <span>State / location</span>
+            <input
+              type="text"
+              name="State or Location"
+              placeholder="Example: Missouri, Texas, Illinois, remote"
+            />
+          </label>
+
+          <label class="field">
+            <span>Availability</span>
+            <select name="Availability">
+              <option value="">Select one</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Contract">Contract</option>
+              <option value="Volunteer only">Volunteer only</option>
+              <option value="Flexible / open to discussion">Flexible / open to discussion</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Resume, LinkedIn, website, or portfolio link</span>
+          <input
+            type="url"
+            name="Resume or Profile Link"
+            placeholder="https://..."
+          />
+        </label>
+
+        <label class="field">
+          <span>Brief summary</span>
+          <textarea
+            name="Brief Summary"
+            rows="6"
+            placeholder="Tell us what type of opportunity you are interested in, your relevant background, and why you would like to connect with Quantum..."
+            required
+          ></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="Contact Consent" value="Yes" required />
+          <span>
+            I agree to be contacted by Quantum Behavioral Health & Wellness
+            regarding my opportunities inquiry.
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Submit Inquiry
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="form-foot">
+          This form is not for emergencies, crisis support, or protected health information.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script> document.addEventListener("DOMContentLoaded", function () { const opportunitiesForm = document.getElementById("opportunities-form"); if (!opportunitiesForm) return; opportunitiesForm.addEventListener("submit", function (event) { event.preventDefault(); const submitButton = opportunitiesForm.querySelector("button[type='submit']"); const originalButtonText = submitButton ? submitButton.innerHTML : ""; if (submitButton) { submitButton.disabled = true; submitButton.innerHTML = "Sending..."; } const formData = new FormData(opportunitiesForm); let hasRedirected = false; function goToThankYouPage() { if (hasRedirected) return; hasRedirected = true; window.location.href = "../thank-you/thank-you.html"; } fetch(opportunitiesForm.action, { method: "POST", body: formData, headers: { Accept: "application/json" } }) .then(function () { goToThankYouPage(); }) .catch(function (error) { console.warn("Opportunities form submitted, redirect fallback used:", error); goToThankYouPage(); }); setTimeout(function () { goToThankYouPage(); }, 3500); }); }); </script>
+
+</body> </html>
