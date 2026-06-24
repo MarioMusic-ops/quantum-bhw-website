@@ -729,3 +729,27 @@ opacity: 1;
 margin-top: 20px;
 }
 }
+
+/* =========================================================
+   Staff Roster Revision
+   ========================================================= */
+
+.team-grid-staff {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.team-grid-staff .team-card {
+  min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .team-grid-staff {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .team-grid-staff {
+    grid-template-columns: 1fr;
+  }
+}
