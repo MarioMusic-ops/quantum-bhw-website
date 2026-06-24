@@ -7834,4 +7834,11 @@ margin-top: 16px !important;
 }
 }
 
-
+/* Opportunities note inside Resources / Grow with Quantum card */
+.resources-join-note {
+margin-top: 14px;
+font-size: 14.5px;
+line-height: 1.6;
+color: rgba(255, 255, 255, 0.72);
+font-weight: 700;
+}
