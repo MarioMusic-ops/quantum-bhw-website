@@ -1382,22 +1382,30 @@ padding: 30px 24px;
 }
 
 .insurance-logo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 14px;
+
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.76);
   box-shadow: 0 20px 46px rgba(14, 75, 61, 0.12);
 }
 
 .insurance-logo-grid span {
+  flex: 0 0 calc(33.333% - 10px);
   min-height: 64px;
+
   display: grid;
   place-items: center;
+
   padding: 12px 14px;
   border-radius: 16px;
+
   background: var(--cream-2);
   border: 1px solid rgba(14, 75, 61, 0.12);
+
   color: var(--forest);
   font-size: 13px;
   font-weight: 900;
