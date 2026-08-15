@@ -360,6 +360,59 @@
   color: var(--gold);
 }
 
+/* Expandable staff biographies */
+.team-bio-details {
+  margin: 4px 0 22px;
+  border-top: 1px solid rgba(14, 75, 61, 0.12);
+  border-bottom: 1px solid rgba(14, 75, 61, 0.12);
+}
+
+.team-bio-details summary {
+  padding: 14px 0;
+  color: var(--forest);
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  list-style: none;
+  transition: color var(--transition);
+}
+
+.team-bio-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.team-bio-details summary::after {
+  content: "+";
+  float: right;
+  color: var(--gold);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.team-bio-details[open] summary::after {
+  content: "−";
+}
+
+.team-bio-details summary:hover {
+  color: var(--gold);
+}
+
+.team-bio-expanded {
+  padding-bottom: 6px;
+}
+
+.team-bio-expanded p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.68;
+  font-weight: 600;
+}
+
+.team-bio-expanded p:last-child {
+  margin-bottom: 16px;
+}
+
 /* CTA */
 .team-cta-section {
   padding: 92px 32px;
