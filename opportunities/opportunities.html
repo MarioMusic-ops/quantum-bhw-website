@@ -1,191 +1,542 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Opportunities | Quantum Behavioral Health & Wellness</title>
+  <title>Opportunities | Quantum Behavioral Health & Wellness</title>
 
-<meta name="description" content="Submit an opportunities inquiry for employment, volunteer, internship, coaching, administrative, or clinical roles with Quantum Behavioral Health & Wellness." />
+  <meta
+    name="description"
+    content="Submit an opportunities inquiry for employment, volunteer, internship, coaching, administrative, or clinical roles with Quantum Behavioral Health & Wellness."
+  />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link rel="stylesheet" href="./opportunities.css" /> </head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
-<body> <main class="opportunities-page"> <section class="opportunities-hero" aria-labelledby="opportunities-title"> <div class="opportunities-card"> <a href="../index.html#home" class="opportunities-logo-link" aria-label="Return to Quantum Behavioral Health & Wellness home" > <img src="../assets/quantum-logo.png" alt="Quantum Behavioral Health & Wellness logo" class="opportunities-logo" /> </a>
+  <link rel="stylesheet" href="./opportunities.css" />
+</head>
 
-    <div class="opportunities-layout">
-      <div class="opportunities-copy">
-        <p class="eyebrow">Opportunities</p>
+<body>
 
-        <h1 id="opportunities-title">
-          Grow with Quantum.
-        </h1>
+  <main class="opportunities-page">
 
-        <p class="opportunities-lead">
-          Thank you for your interest in connecting with Quantum Behavioral
-          Health & Wellness. Please complete this brief inquiry form for
-          employment, volunteer, internship, coaching, administrative, or
-          clinical opportunities.
-        </p>
+    <section
+      class="opportunities-hero"
+      aria-labelledby="opportunities-title"
+    >
 
-        <div class="opportunities-note" role="note">
-          <strong>Please note:</strong>
-          This form is for opportunities inquiries only. Please do not submit
-          Protected Health Information or emergency requests through this form.
-        </div>
+      <div class="opportunities-card">
 
-        <a href="../index.html#home" class="back-home-link">
-          ← Go back home
+        <!-- Logo -->
+        <a
+          href="../index.html#home"
+          class="opportunities-logo-link"
+          aria-label="Return to Quantum Behavioral Health & Wellness home"
+        >
+          <img
+            src="../assets/quantum-logo.png"
+            alt="Quantum Behavioral Health & Wellness logo"
+            class="opportunities-logo"
+          />
         </a>
+
+
+        <div class="opportunities-layout">
+
+          <!-- Intro / Contact Information -->
+          <div class="opportunities-copy">
+
+            <p class="eyebrow">Opportunities</p>
+
+            <h1 id="opportunities-title">
+              Grow with Quantum.
+            </h1>
+
+            <p class="opportunities-lead">
+              Thank you for your interest in connecting with Quantum Behavioral
+              Health &amp; Wellness. Please complete this brief inquiry form for
+              employment, clinical, coaching, administrative, internship,
+              volunteer, or other opportunities with Quantum.
+            </p>
+
+
+            <!-- HR Contact -->
+            <div class="opportunities-note" role="note">
+
+              <strong>Employment Inquiries</strong>
+
+              <p>
+                Please contact our HR Director,
+                <strong>Pherren Lewis</strong>, at
+                <a href="mailto:plewis@youbelonghere.live">
+                  plewis@youbelonghere.live
+                </a>.
+              </p>
+
+              <p>
+                You may also submit the opportunities inquiry form on this page,
+                which will be routed to Human Resources for review.
+              </p>
+
+            </div>
+
+
+            <!-- Privacy / PHI Notice -->
+            <div class="opportunities-note" role="note">
+
+              <strong>Please note:</strong>
+
+              <p>
+                This form is for employment and opportunities inquiries only.
+                Please do not submit Protected Health Information (PHI),
+                client information, or emergency requests through this form.
+              </p>
+
+            </div>
+
+
+            <a
+              href="../index.html#home"
+              class="back-home-link"
+            >
+              ← Go back home
+            </a>
+
+          </div>
+
+
+          <!-- Opportunities Form -->
+          <form
+            class="opportunities-form"
+            id="opportunities-form"
+            aria-label="Opportunities inquiry form"
+            action="https://formsubmit.co/ajax/plewis@youbelonghere.live"
+            method="POST"
+          >
+
+            <!-- FormSubmit Settings -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Employment / Opportunities Inquiry from Quantum Website"
+            />
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            />
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false"
+            />
+
+            <!-- Honeypot -->
+            <input
+              type="text"
+              name="_honey"
+              style="display: none;"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+
+            <!-- Name / Email -->
+            <div class="field-row">
+
+              <label class="field">
+                <span>Full name</span>
+
+                <input
+                  type="text"
+                  name="Full Name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+
+
+              <label class="field">
+                <span>Email</span>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+
+            </div>
+
+
+            <!-- Phone / Preferred Contact -->
+            <div class="field-row">
+
+              <label class="field">
+                <span>Phone number</span>
+
+                <input
+                  type="tel"
+                  name="Phone"
+                  placeholder="(555) 123-4567"
+                  autocomplete="tel"
+                />
+              </label>
+
+
+              <label class="field">
+                <span>Preferred contact method</span>
+
+                <select name="Preferred Contact Method">
+
+                  <option value="">
+                    Select one
+                  </option>
+
+                  <option value="Email">
+                    Email
+                  </option>
+
+                  <option value="Phone">
+                    Phone
+                  </option>
+
+                  <option value="Either email or phone">
+                    Either email or phone
+                  </option>
+
+                </select>
+              </label>
+
+            </div>
+
+
+            <!-- Opportunity Type / Area -->
+            <div class="field-row">
+
+              <label class="field">
+                <span>Opportunity type</span>
+
+                <select
+                  name="Opportunity Type"
+                  required
+                >
+
+                  <option value="">
+                    Select one
+                  </option>
+
+                  <option value="Employment">
+                    Employment
+                  </option>
+
+                  <option value="Clinical Position">
+                    Clinical Position
+                  </option>
+
+                  <option value="Coaching Position">
+                    Coaching Position
+                  </option>
+
+                  <option value="Administrative Position">
+                    Administrative Position
+                  </option>
+
+                  <option value="Internship">
+                    Internship
+                  </option>
+
+                  <option value="Volunteer Opportunity">
+                    Volunteer Opportunity
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
+              </label>
+
+
+              <label class="field">
+                <span>Area of interest</span>
+
+                <input
+                  type="text"
+                  name="Area of Interest"
+                  placeholder="Example: therapy, coaching, intake, admin, outreach"
+                  required
+                />
+              </label>
+
+            </div>
+
+
+            <!-- Credentials -->
+            <label class="field">
+
+              <span>
+                Credentials, license, or experience
+              </span>
+
+              <input
+                type="text"
+                name="Credentials or Experience"
+                placeholder="Example: LPC, PLPC, Life Coach, student intern, admin experience"
+              />
+
+            </label>
+
+
+            <!-- Location / Availability -->
+            <div class="field-row">
+
+              <label class="field">
+
+                <span>
+                  State / location
+                </span>
+
+                <input
+                  type="text"
+                  name="State or Location"
+                  placeholder="Example: Missouri, Texas, Illinois, remote"
+                />
+
+              </label>
+
+
+              <label class="field">
+
+                <span>
+                  Availability
+                </span>
+
+                <select name="Availability">
+
+                  <option value="">
+                    Select one
+                  </option>
+
+                  <option value="Full-time">
+                    Full-time
+                  </option>
+
+                  <option value="Part-time">
+                    Part-time
+                  </option>
+
+                  <option value="Contract">
+                    Contract
+                  </option>
+
+                  <option value="Volunteer only">
+                    Volunteer only
+                  </option>
+
+                  <option value="Flexible / open to discussion">
+                    Flexible / open to discussion
+                  </option>
+
+                </select>
+
+              </label>
+
+            </div>
+
+
+            <!--
+            Resume / LinkedIn / Portfolio field can be added later
+            if Quantum wants applicants to provide links.
+
+            <label class="field">
+
+              <span>
+                Resume, LinkedIn, website, or portfolio link
+              </span>
+
+              <input
+                type="url"
+                name="Resume or Profile Link"
+                placeholder="https://..."
+              />
+
+            </label>
+            -->
+
+
+            <!-- Summary -->
+            <label class="field">
+
+              <span>
+                Brief summary
+              </span>
+
+              <textarea
+                name="Brief Summary"
+                rows="6"
+                placeholder="Tell us what type of opportunity you are interested in, your relevant background, and why you would like to connect with Quantum..."
+                required
+              ></textarea>
+
+            </label>
+
+
+            <!-- Consent -->
+            <label class="checkbox">
+
+              <input
+                type="checkbox"
+                name="Contact Consent"
+                value="Yes"
+                required
+              />
+
+              <span>
+                I agree to be contacted by Quantum Behavioral Health &amp; Wellness
+                regarding my opportunities inquiry.
+              </span>
+
+            </label>
+
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="btn btn-primary form-submit"
+            >
+
+              Submit Inquiry
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </button>
+
+
+            <!-- Footer Note -->
+            <p class="form-foot">
+              This form is not for emergencies, crisis support,
+              client care requests, or Protected Health Information (PHI).
+            </p>
+
+          </form>
+
+        </div>
       </div>
 
-      <form class="opportunities-form" id="opportunities-form" aria-label="Opportunities inquiry form" action="https://formsubmit.co/ajax/vrodriguez@youbelonghere.live.com" method="POST" > <input type="hidden" name="_subject" value="New Opportunities Inquiry from Quantum Website" /> <input type="hidden" name="_template" value="table" /> <input type="hidden" name="_captcha" value="false" /> <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
+    </section>
 
-        <div class="field-row">
-          <label class="field">
-            <span>Full name</span>
-            <input
-              type="text"
-              name="Full Name"
-              placeholder="Your full name"
-              autocomplete="name"
-              required
-            />
-          </label>
+  </main>
 
-          <label class="field">
-            <span>Email</span>
-            <input
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              autocomplete="email"
-              required
-            />
-          </label>
-        </div>
 
-        <div class="field-row">
-          <label class="field">
-            <span>Phone number</span>
-            <input
-              type="tel"
-              name="Phone"
-              placeholder="(555) 123-4567"
-              autocomplete="tel"
-            />
-          </label>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
 
-          <label class="field">
-            <span>Preferred contact method</span>
-            <select name="Preferred Contact Method">
-              <option value="">Select one</option>
-              <option value="Email">Email</option>
-              <option value="Phone">Phone</option>
-              <option value="Either email or phone">Either email or phone</option>
-            </select>
-          </label>
-        </div>
+      const opportunitiesForm =
+        document.getElementById("opportunities-form");
 
-        <div class="field-row">
-          <label class="field">
-            <span>Opportunity type</span>
-            <select name="Opportunity Type" required>
-              <option value="">Select one</option>
-              <option value="Employment">Employment</option>
-              <option value="Clinical Position">Clinical Position</option>
-              <option value="Coaching Position">Coaching Position</option>
-              <option value="Administrative Position">Administrative Position</option>
-              <option value="Internship">Internship</option>
-              <option value="Volunteer Opportunity">Volunteer Opportunity</option>
-              <option value="Other">Other</option>
-            </select>
-          </label>
+      if (!opportunitiesForm) return;
 
-          <label class="field">
-            <span>Area of interest</span>
-            <input
-              type="text"
-              name="Area of Interest"
-              placeholder="Example: therapy, coaching, intake, admin, outreach"
-              required
-            />
-          </label>
-        </div>
 
-        <label class="field">
-          <span>Credentials, license, or experience</span>
-          <input
-            type="text"
-            name="Credentials or Experience"
-            placeholder="Example: LPC, PLPC, Life Coach, student intern, admin experience"
-          />
-        </label>
+      opportunitiesForm.addEventListener(
+        "submit",
+        function (event) {
 
-        <div class="field-row">
-          <label class="field">
-            <span>State / location</span>
-            <input
-              type="text"
-              name="State or Location"
-              placeholder="Example: Missouri, Texas, Illinois, remote"
-            />
-          </label>
+          event.preventDefault();
 
-          <label class="field">
-            <span>Availability</span>
-            <select name="Availability">
-              <option value="">Select one</option>
-              <option value="Full-time">Full-time</option>
-              <option value="Part-time">Part-time</option>
-              <option value="Contract">Contract</option>
-              <option value="Volunteer only">Volunteer only</option>
-              <option value="Flexible / open to discussion">Flexible / open to discussion</option>
-            </select>
-          </label>
-        </div>
 
-        <!-- <label class="field">
-          <span>Resume, LinkedIn, website, or portfolio link</span>
-          <input
-            type="url"
-            name="Resume or Profile Link"
-            placeholder="https://..."
-          />
-        </label> -->
+          const submitButton =
+            opportunitiesForm.querySelector(
+              "button[type='submit']"
+            );
 
-        <label class="field">
-          <span>Brief summary</span>
-          <textarea
-            name="Brief Summary"
-            rows="6"
-            placeholder="Tell us what type of opportunity you are interested in, your relevant background, and why you would like to connect with Quantum..."
-            required
-          ></textarea>
-        </label>
+          const originalButtonText =
+            submitButton
+              ? submitButton.innerHTML
+              : "";
 
-        <label class="checkbox">
-          <input type="checkbox" name="Contact Consent" value="Yes" required />
-          <span>
-            I agree to be contacted by Quantum Behavioral Health & Wellness
-            regarding my opportunities inquiry.
-          </span>
-        </label>
 
-        <button type="submit" class="btn btn-primary form-submit">
-          Submit Inquiry
-          <span aria-hidden="true">→</span>
-        </button>
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.innerHTML = "Sending...";
+          }
 
-        <p class="form-foot">
-          This form is not for emergencies, crisis support, or protected health information.
-        </p>
-      </form>
-    </div>
-  </div>
-</section>
 
-</main>
+          const formData =
+            new FormData(opportunitiesForm);
 
-<script> document.addEventListener("DOMContentLoaded", function () { const opportunitiesForm = document.getElementById("opportunities-form"); if (!opportunitiesForm) return; opportunitiesForm.addEventListener("submit", function (event) { event.preventDefault(); const submitButton = opportunitiesForm.querySelector("button[type='submit']"); const originalButtonText = submitButton ? submitButton.innerHTML : ""; if (submitButton) { submitButton.disabled = true; submitButton.innerHTML = "Sending..."; } const formData = new FormData(opportunitiesForm); fetch(opportunitiesForm.action, { method: "POST", body: formData, headers: { Accept: "application/json" } }) .then(function (response) { if (!response.ok) { throw new Error("FormSubmit did not accept the submission."); } return response.json(); }) .then(function () { window.location.href = "../thank-you/thank-you.html"; }) .catch(function (error) { console.error("Opportunities form error:", error); alert("Something went wrong and the inquiry may not have been sent. Please try again or call 888-441-3959."); if (submitButton) { submitButton.disabled = false; submitButton.innerHTML = originalButtonText; } }); }); }); </script>
 
-</body> </html>
+          fetch(
+            opportunitiesForm.action,
+            {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json"
+              }
+            }
+          )
+
+          .then(function (response) {
+
+            if (!response.ok) {
+              throw new Error(
+                "FormSubmit did not accept the submission."
+              );
+            }
+
+            return response.json();
+
+          })
+
+          .then(function () {
+
+            window.location.href =
+              "../thank-you/thank-you.html";
+
+          })
+
+          .catch(function (error) {
+
+            console.error(
+              "Opportunities form error:",
+              error
+            );
+
+            alert(
+              "Something went wrong and the inquiry may not have been sent. " +
+              "Please try again, email plewis@youbelonghere.live, " +
+              "or call 888-441-3959."
+            );
+
+
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.innerHTML =
+                originalButtonText;
+            }
+
+          });
+
+        }
+      );
+
+    });
+  </script>
+
+</body>
+</html>
