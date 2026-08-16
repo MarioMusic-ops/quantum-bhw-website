@@ -8088,3 +8088,20 @@ width: 100%;
   color: var(--white);
 }
 
+/* Join Our Team — spacing refinement */
+.resources-join-card {
+  padding: 44px 48px;
+  gap: 48px;
+  align-items: center;
+}
+
+.resources-join-copy {
+  max-width: 720px;
+}
+
+.resources-join-btn {
+  flex-shrink: 0;
+  min-width: 175px;
+  text-align: center;
+  justify-content: center;
+}
