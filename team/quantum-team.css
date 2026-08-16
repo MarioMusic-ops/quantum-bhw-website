@@ -816,3 +816,35 @@ margin-top: 20px;
     max-width: none;
   }
 }
+
+/* Temporary team profile photo placeholder */
+.team-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+
+  text-align: center;
+  background: rgba(14, 75, 61, 0.08);
+}
+
+.team-photo-placeholder span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.team-photo-placeholder small {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
