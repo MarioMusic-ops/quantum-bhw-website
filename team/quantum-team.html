@@ -19,11 +19,31 @@
     rel="stylesheet"
   />
 
-  <!-- Main site CSS -->
-  <link rel="stylesheet" href="../styles.css" />
+<!-- Main site CSS -->
+<link rel="stylesheet" href="../styles.css" />
 
-  <!-- Team page CSS -->
-  <link rel="stylesheet" href="../team/quantum-team.css" />
+<!-- Team page CSS -->
+<link rel="stylesheet" href="../team/quantum-team.css" />
+
+<!-- Team Photo Size Override -->
+<style>
+  .quantum-team-page .team-photo-frame {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden !important;
+  }
+
+  .quantum-team-page .team-photo-frame .team-photo {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    aspect-ratio: auto !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+</style>
 </head>
 
 <body>
