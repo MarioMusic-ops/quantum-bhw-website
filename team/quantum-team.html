@@ -25,13 +25,19 @@
 <!-- Team page CSS -->
 <link rel="stylesheet" href="../team/quantum-team.css" />
 
-<!-- Team Photo Size Override -->
+<!-- Team Photo Size + Consistency Override -->
 <style>
   .quantum-team-page .team-photo-frame {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
+
     overflow: hidden !important;
+
+    /* Same top corners for every staff photo */
+    border-radius: 32px 32px 0 0 !important;
+
+    /* Fills unused space when original photo proportions differ */
     background: #f8f6f0 !important;
   }
 
@@ -39,10 +45,17 @@
     width: 100% !important;
     height: 100% !important;
     max-width: none !important;
+
     aspect-ratio: auto !important;
+
+    /* Preserve the entire original photo */
     object-fit: contain !important;
     object-position: center center !important;
+
     display: block !important;
+
+    /* Prevent individual images from adding their own corner styles */
+    border-radius: 0 !important;
   }
 </style>
 </head>
