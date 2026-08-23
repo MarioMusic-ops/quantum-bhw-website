@@ -1695,81 +1695,128 @@
     Get Started
   </a>
 
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const isOpen = mobileMenu.classList.contains('active');
-        menuToggle.setAttribute('aria-expanded', isOpen);
-        menuToggle.classList.toggle('is-open', isOpen);
-      });
-    }
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
 
-    const mobileLinks = document.querySelectorAll('.mobile-menu a');
-    mobileLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
+      const isOpen = mobileMenu.classList.contains('active');
+
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.classList.toggle('is-open', isOpen);
+    });
+  }
+
+  const mobileLinks = document.querySelectorAll('.mobile-menu a');
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+
+      if (menuToggle) {
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.classList.remove('is-open');
-      });
+      }
     });
+  });
 
-    const revealElements = document.querySelectorAll('.reveal-fade-up');
 
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+  /* =========================================================
+     Reveal Animations
+     ========================================================= */
+
+  const revealElements = document.querySelectorAll('.reveal-fade-up');
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
-    }, {
+    },
+    {
       threshold: 0.12,
       rootMargin: '0px 0px -10% 0px'
-    });
-
-    revealElements.forEach((el) => revealObserver.observe(el));
-
-    const floatingStartButton = document.querySelector('.floating-start-button');
-const heroSection = document.querySelector('#home');
-
-if (floatingStartButton && heroSection) {
-  const toggleFloatingStartButton = () => {
-    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-
-    if (window.scrollY > heroBottom - 40) {
-      floatingStartButton.classList.add('is-visible');
-    } else {
-      floatingStartButton.classList.remove('is-visible');
     }
-  };
+  );
 
-  window.addEventListener('scroll', toggleFloatingStartButton);
-  window.addEventListener('load', toggleFloatingStartButton);
-}
+  revealElements.forEach((el) => {
+    revealObserver.observe(el);
+  });
 
-const testimonialTrack = document.querySelector('.testimonial-track');
-  const testimonialCards = document.querySelectorAll('.testimonial-track .testimonial');
-  const testimonialPrev = document.querySelector('.testimonial-prev');
-  const testimonialNext = document.querySelector('.testimonial-next');
-  const testimonialDots = document.querySelector('.testimonial-dots');
-  const testimonialCarousel = document.querySelector('.testimonial-carousel');
 
-  if (testimonialTrack && testimonialCards.length > 0) {
+  /* =========================================================
+     Floating Get Started Button
+     ========================================================= */
+
+  const floatingStartButton = document.querySelector('.floating-start-button');
+  const heroSection = document.querySelector('#home');
+
+  if (floatingStartButton && heroSection) {
+    const toggleFloatingStartButton = () => {
+      const heroBottom =
+        heroSection.offsetTop + heroSection.offsetHeight;
+
+      if (window.scrollY > heroBottom - 40) {
+        floatingStartButton.classList.add('is-visible');
+      } else {
+        floatingStartButton.classList.remove('is-visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleFloatingStartButton);
+    window.addEventListener('load', toggleFloatingStartButton);
+  }
+
+
+  /* =========================================================
+     Testimonial Carousel
+     ========================================================= */
+
+  const testimonialTrack =
+    document.querySelector('.testimonial-track');
+
+  const testimonialCards =
+    document.querySelectorAll('.testimonial-track .testimonial');
+
+  const testimonialPrev =
+    document.querySelector('.testimonial-prev');
+
+  const testimonialNext =
+    document.querySelector('.testimonial-next');
+
+  const testimonialDots =
+    document.querySelector('.testimonial-dots');
+
+  const testimonialCarousel =
+    document.querySelector('.testimonial-carousel');
+
+
+  if (
+    testimonialTrack &&
+    testimonialCards.length > 0 &&
+    testimonialDots
+  ) {
     let testimonialIndex = 0;
     let autoRotate;
 
     const getVisibleCount = () => {
       if (window.innerWidth <= 720) return 1;
       if (window.innerWidth <= 1000) return 2;
+
       return 3;
     };
 
     const getMaxIndex = () => {
-      return Math.max(0, testimonialCards.length - getVisibleCount());
+      return Math.max(
+        0,
+        testimonialCards.length - getVisibleCount()
+      );
     };
 
     const buildDots = () => {
@@ -1777,11 +1824,17 @@ const testimonialTrack = document.querySelector('.testimonial-track');
 
       for (let i = 0; i <= getMaxIndex(); i++) {
         const dot = document.createElement('button');
+
         dot.type = 'button';
-        dot.setAttribute('aria-label', `Go to testimonial set ${i + 1}`);
+
+        dot.setAttribute(
+          'aria-label',
+          `Go to testimonial set ${i + 1}`
+        );
 
         dot.addEventListener('click', () => {
           testimonialIndex = i;
+
           updateCarousel();
           restartAutoRotate();
         });
@@ -1795,28 +1848,48 @@ const testimonialTrack = document.querySelector('.testimonial-track');
       const gap = 20;
       const cardWidth = card.offsetWidth + gap;
 
-      testimonialIndex = Math.min(testimonialIndex, getMaxIndex());
+      testimonialIndex = Math.min(
+        testimonialIndex,
+        getMaxIndex()
+      );
 
-      testimonialTrack.style.transform = `translateX(-${testimonialIndex * cardWidth}px)`;
+      testimonialTrack.style.transform =
+        `translateX(-${testimonialIndex * cardWidth}px)`;
 
-      const dots = testimonialDots.querySelectorAll('button');
+      const dots =
+        testimonialDots.querySelectorAll('button');
+
       dots.forEach((dot, index) => {
-        dot.classList.toggle('is-active', index === testimonialIndex);
+        dot.classList.toggle(
+          'is-active',
+          index === testimonialIndex
+        );
       });
     };
 
     const nextTestimonial = () => {
-      testimonialIndex = testimonialIndex >= getMaxIndex() ? 0 : testimonialIndex + 1;
+      testimonialIndex =
+        testimonialIndex >= getMaxIndex()
+          ? 0
+          : testimonialIndex + 1;
+
       updateCarousel();
     };
 
     const prevTestimonial = () => {
-      testimonialIndex = testimonialIndex <= 0 ? getMaxIndex() : testimonialIndex - 1;
+      testimonialIndex =
+        testimonialIndex <= 0
+          ? getMaxIndex()
+          : testimonialIndex - 1;
+
       updateCarousel();
     };
 
     const startAutoRotate = () => {
-      autoRotate = setInterval(nextTestimonial, 4500);
+      autoRotate = setInterval(
+        nextTestimonial,
+        4500
+      );
     };
 
     const stopAutoRotate = () => {
@@ -1828,18 +1901,31 @@ const testimonialTrack = document.querySelector('.testimonial-track');
       startAutoRotate();
     };
 
-    testimonialNext?.addEventListener('click', () => {
-      nextTestimonial();
-      restartAutoRotate();
-    });
+    testimonialNext?.addEventListener(
+      'click',
+      () => {
+        nextTestimonial();
+        restartAutoRotate();
+      }
+    );
 
-    testimonialPrev?.addEventListener('click', () => {
-      prevTestimonial();
-      restartAutoRotate();
-    });
+    testimonialPrev?.addEventListener(
+      'click',
+      () => {
+        prevTestimonial();
+        restartAutoRotate();
+      }
+    );
 
-    testimonialCarousel?.addEventListener('mouseenter', stopAutoRotate);
-    testimonialCarousel?.addEventListener('mouseleave', startAutoRotate);
+    testimonialCarousel?.addEventListener(
+      'mouseenter',
+      stopAutoRotate
+    );
+
+    testimonialCarousel?.addEventListener(
+      'mouseleave',
+      startAutoRotate
+    );
 
     window.addEventListener('resize', () => {
       buildDots();
@@ -1851,8 +1937,125 @@ const testimonialTrack = document.querySelector('.testimonial-track');
     startAutoRotate();
   }
 
-document.addEventListener("DOMContentLoaded", function () { const clientForm = document.getElementById("client-form"); if (!clientForm) return; clientForm.addEventListener("submit", function (event) { event.preventDefault(); const submitButton = clientForm.querySelector("button[type='submit']"); const originalButtonText = submitButton ? submitButton.innerHTML : ""; if (submitButton) { submitButton.disabled = true; submitButton.innerHTML = "Sending..."; } const formData = new FormData(clientForm); let hasRedirected = false; function goToThankYouPage() { if (hasRedirected) return; hasRedirected = true; window.location.href = "./thank-you/thank-you.html"; } fetch(clientForm.action, { method: "POST", body: formData, headers: { Accept: "application/json" } }) .then(function () { goToThankYouPage(); }) .catch(function (error) { console.warn("Form submitted, but redirect fallback was needed:", error); goToThankYouPage(); }); /* Backup redirect: Since the email is successfully being sent, this prevents the button from staying stuck on "Sending..." if FormSubmit does not return a clean browser response. */ setTimeout(function () { goToThankYouPage(); }, 3500); }); });
-    
-  </script>
+
+  /* =========================================================
+     CLIENT INTAKE FORM — TEMPORARY DELIVERY TEST
+     ========================================================= */
+
+  document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+      const clientForm =
+        document.getElementById('client-form');
+
+      if (!clientForm) {
+        console.error(
+          'Client intake form was not found.'
+        );
+
+        return;
+      }
+
+      console.log(
+        'Form recipient endpoint:',
+        clientForm.action
+      );
+
+      clientForm.addEventListener(
+        'submit',
+        async function (event) {
+          event.preventDefault();
+
+          const submitButton =
+            clientForm.querySelector(
+              "button[type='submit']"
+            );
+
+          const originalButtonText =
+            submitButton
+              ? submitButton.innerHTML
+              : '';
+
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.innerHTML =
+              'Sending...';
+          }
+
+          const formData =
+            new FormData(clientForm);
+
+          try {
+            const response = await fetch(
+              clientForm.action,
+              {
+                method: 'POST',
+                body: formData,
+                headers: {
+                  Accept: 'application/json'
+                }
+              }
+            );
+
+            const responseText =
+              await response.text();
+
+            let responseData;
+
+            try {
+              responseData =
+                JSON.parse(responseText);
+            } catch {
+              responseData =
+                responseText;
+            }
+
+            console.log(
+              'FormSubmit HTTP status:',
+              response.status
+            );
+
+            console.log(
+              'FormSubmit response:',
+              responseData
+            );
+
+            if (!response.ok) {
+              throw new Error(
+                typeof responseData === 'object' &&
+                responseData !== null &&
+                responseData.message
+                  ? responseData.message
+                  : `FormSubmit returned HTTP ${response.status}`
+              );
+            }
+
+            alert(
+              'TEST SUCCESS: FormSubmit accepted the intake submission. Please check your email inbox and spam folder.'
+            );
+
+            window.location.href =
+              './thank-you/thank-you.html';
+          } catch (error) {
+            console.error(
+              'FORM SUBMISSION FAILED:',
+              error
+            );
+
+            alert(
+              'TEST FAILED: The intake form was not successfully submitted. Please open the browser Console so we can see the FormSubmit error.'
+            );
+
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.innerHTML =
+                originalButtonText;
+            }
+          }
+        }
+      );
+    }
+  );
+</script>
 </body>
 </html>
