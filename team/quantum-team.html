@@ -34,10 +34,10 @@
 
     overflow: hidden !important;
 
-    /* Same top corners for every staff photo */
-    border-radius: 32px 32px 0 0 !important;
+    /* Uniform sharp corners for all staff photos */
+    border-radius: 0 !important;
 
-    /* Fills unused space when original photo proportions differ */
+    /* Neutral fill when original image proportions differ */
     background: #f8f6f0 !important;
   }
 
@@ -48,13 +48,13 @@
 
     aspect-ratio: auto !important;
 
-    /* Preserve the entire original photo */
+    /* Preserve the entire original photo without cropping */
     object-fit: contain !important;
     object-position: center center !important;
 
     display: block !important;
 
-    /* Prevent individual images from adding their own corner styles */
+    /* Keep all image edges consistent */
     border-radius: 0 !important;
   }
 </style>
